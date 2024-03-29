@@ -8,8 +8,8 @@ function App() {
   return (
     <>
 
-<Nav />
-<Outlet />
+      <Nav />
+      <Outlet />
     </>
   )
 }

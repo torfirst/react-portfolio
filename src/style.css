@@ -9,6 +9,7 @@
 
 * {
   font-size: 1rem;
+  color: white;
   /* FOR TESTING
   outline: 2px solid red;
   border: 2px solid green; */
@@ -18,7 +19,7 @@
   background-color: var(--highlight);
   color: var(--bgcolor);
 }
-
+/* 
 a:link {
   color: yellow;
   text-decoration: none;
@@ -26,7 +27,7 @@ a:link {
 
 a:visited {
   color: aqua;
-}
+} */
 
 /* Hover on desktop only */
 @media screen and (min-width: 1024px) {
