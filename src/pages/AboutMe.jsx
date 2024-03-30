@@ -5,7 +5,7 @@ export default function AboutMe() {
     return (
         <div>
             {/* <Header headerText="About Me" headerStyle={{backgroundColor: "var(--bgcolor)", color:"white"}}/> */}
-            <h2>About Me</h2>
+            <h2>about me</h2>
             <div className="about-me">
                 <img id="headshot" src={Photo}></img>
                 <p className="bio">Hello! This is where my bio will go.

@@ -7,18 +7,18 @@ export default function Nav() {
       <h1 className="title">tor first</h1>
       </header>
     <nav className="navbar">
-          <ul className="" id="navLinks">
+          <ul id="navLinks">
           <Link className="nav-link text-light" to="/">
-          About Me 
+          about me 
         </Link>
         <Link className="nav-link text-light" to="/portfolio">
-          Portfolio 
+          portfolio 
         </Link>
         <Link className="nav-link text-light" to="/contact">
-          Contact 
+          contact 
         </Link>
         <Link className="nav-link text-light" to="/resume">
-          Resume 
+          resume 
         </Link>
           </ul>
     </nav>

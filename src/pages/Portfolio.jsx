@@ -19,7 +19,7 @@ export default function Portfolio(){
     ]
     return (
         <div>
-        <h2>Portfolio</h2>
+        <h2>portfolio</h2>
         {dataArray.map(data => (
             <a href={data.link} key={data.title}>
                 {/* <h3>{data.title}</h3> */}
