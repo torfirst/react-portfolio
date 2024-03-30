@@ -19,6 +19,7 @@
   background-color: var(--highlight);
   color: var(--bgcolor);
 }
+
 /* 
 a:link {
   color: yellow;
@@ -49,13 +50,13 @@ h2 {
 
 h1 {
   font-size: 2.4rem;
-  padding-left: 6rem;
+  padding-left: 7rem;
   padding-top: 4rem;
   padding-bottom: 1rem;
 }
 
 h2 {
-  color: var(--heading);
+  /* color: var(--heading); */
   font-size: 2.0rem;
   padding: 1% 5%;
 }
@@ -69,9 +70,12 @@ body {
   background-color: var(--bgcolor);
 }
 
-.container {
-  padding-top: 3rem;
+p {
+  font-size: 1.1rem;
 }
+/* .container {
+  padding-top: 3rem;
+} */
 
 /* NAV */
 header {
@@ -81,21 +85,29 @@ header {
   color: var(--text-color);
 }
 
-#contact-links {
+#navLinks {
   position: absolute;
-  right: 7rem;
-  bottom: -3rem;
+  right: 10rem;
+  /* bottom: -3rem; */
   background-color: grey;
-  width: 20rem;
+  width: 30rem;
   height: 3.75rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.contact-links {
+.navLinks {
   display: inline;
   list-style-type: none;
+}
+
+#nav-ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10rem;
 }
 
 /* ABOUT ME SECTION */
@@ -147,31 +159,35 @@ header {
 
 .about-me {
   color: aliceblue;
-  margin: auto 5%;
+  margin: auto 8%;
   text-align: left;
-  font-family: monospace;
+  font-family: 'asap';
   display: flex;
   gap: 1.5rem;
 }
 
-.profile {
-  border-radius: 10px;
-  width: 20%;
+#headshot {  
+  width: 10%;
   height: 100%;
   flex: 1;
+  border-radius: 50%;
 }
 
 .bio {
-  flex: 3;
+  padding: 0 1rem;
+  flex: 4;
 }
 
-.profile-headings {
-  text-indent: 2rem;
-}
+/* 
+.pageHeadings {
+  text-indent: 6rem;
+  text-align: left;
+} */
 
 ul {
   line-height: 1.5;
   margin-bottom: 1%;
+  padding-left: 0;
 }
 
 li {
@@ -213,6 +229,9 @@ figure {
 }
 
 /* MOBILE */
+@media screen and (max-width: 1800px) {
+
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -232,7 +251,7 @@ figure {
     color: var(--text-color);
   }
 
-  #contact-links {
+  #navLinks {
     position: absolute;
     right: 0;
     bottom: -3rem;
@@ -284,3 +303,4 @@ figure {
     /* border: 5px solid var(--bgcolor); */
   }
 }
+

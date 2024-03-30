@@ -1,7 +1,86 @@
 import { useState } from 'react';
-// import '../style.css';
-
 import { validateEmail } from '../../utils/helpers';
+
+// import { useFormik, FormikProvider, Form, useField } from 'formik';
+// import * as Yup from 'yup';
+
+// const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
+//   const [field, meta] = useField(props);
+//   const [didFocus, setDidFocus] = React.useState(false);
+//   const handleFocus = () => setDidFocus(true);
+//   const showFeedback =
+//     (!!didFocus && field.value.trim().length > 2) || meta.touched;
+
+//   return (
+//     <div
+//       className={`form-control ${
+//         showFeedback ? (meta.error ? 'invalid' : 'valid') : ''
+//       }`}
+//     >
+//       <div className="flex items-center space-between">
+//         <label htmlFor={props.id}>{label}</label>{' '}
+//         {showFeedback ? (
+//           <div
+//             id={`${props.id}-feedback`}
+//             aria-live="polite"
+//             className="feedback text-sm"
+//           >
+//             {meta.error ? meta.error : '✓'}
+//           </div>
+//         ) : null}
+//       </div>
+//       <input
+//         {...props}
+//         {...field}
+//         aria-describedby={`${props.id}-feedback ${props.id}-help`}
+//         onFocus={handleFocus}
+//       />
+//       <div className="text-xs" id={`${props.id}-help`} tabIndex="-1">
+//         {helpText}
+//       </div>
+//     </div>
+//   );
+// };
+
+// const Example = () => {
+//   const formik = useFormik({
+//     initialValues: {
+//       username: '',
+//     },
+//     onSubmit: async (values) => {
+//       await sleep(500);
+//       alert(JSON.stringify(values, null, 2));
+//     },
+//     validationSchema: Yup.object({
+//       username: Yup.string()
+//         .min(8, 'Must be at least 8 characters')
+//         .max(20, 'Must be less  than 20 characters')
+//         .required('Username is required')
+//         .matches(
+//           /^[a-zA-Z0-9]+$/,
+//           'Cannot contain special characters or spaces'
+//         ),
+//     }),
+//   });
+
+//   return (
+//     <FormikProvider value={formik}>
+//       <Form>
+//         <TextInputLiveFeedback
+//           label="Username"
+//           id="username"
+//           name="username"
+//           helpText="Must be 8-20 characters and cannot contain special characters."
+//           type="text"
+//         />
+//         <div>
+//           <button type="submit">Submit</button>
+//           <button type="reset">Reset</button>
+//         </div>
+//       </Form>
+//     </FormikProvider>
+//   );
+// }
 
 export default function Contact() {
   // Create state variables for the fields in the form
@@ -28,10 +107,8 @@ export default function Contact() {
   };
 
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
     if (!validateEmail(email) || !name || !message) {
       setErrorMessage('Please fill out all fields.');
       // We want to exit out of this code block if something is wrong so that the user can correct it

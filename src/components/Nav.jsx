@@ -1,14 +1,16 @@
 // Bringing in the required import from 'react-router-dom'
 import { Link } from 'react-router-dom';
 export default function Nav() {
-  // The Navbar UI component will render each of the Link elements in the links prop
   return (
-    <nav className="navbar bg-secondary">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="nav-ul">
+    <>
+    <header>
+      <h1 className="title">tor first</h1>
+      </header>
+    <nav className="navbar">
+          <ul className="" id="navLinks">
           <Link className="nav-link text-light" to="/">
           About Me 
         </Link>
-        
         <Link className="nav-link text-light" to="/portfolio">
           Portfolio 
         </Link>
@@ -20,5 +22,6 @@ export default function Nav() {
         </Link>
           </ul>
     </nav>
+    </>
   );
 }

@@ -2,12 +2,17 @@ import Example from '../assets/react.svg'
 export default function Portfolio(){
     const dataArray = [
         {
-            // title: "You're Cancelled",
+            title: "Birbtopia",
+            image: Example,
+            link: "https://yourecancelled-4aa25f1b6285.herokuapp.com/login"
+        },         
+        {
+            title: "You're Cancelled",
             image: Example,
             link: "https://yourecancelled-4aa25f1b6285.herokuapp.com/login"
         },       
         {
-            // title: "Weather Dashboard",
+            title: "Weather Dashboard",
             image: Example,
             link: "https://torfirst.github.io/weather-dashboard/"
         }
@@ -17,7 +22,7 @@ export default function Portfolio(){
         <h2>Portfolio</h2>
         {dataArray.map(data => (
             <a href={data.link} key={data.title}>
-                <h3>{data.title}</h3>
+                {/* <h3>{data.title}</h3> */}
                 <img src = {data.image}></img>
             </a>
         ))}
