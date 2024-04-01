@@ -20,6 +20,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+
 }
 
 * {
@@ -85,6 +87,7 @@ p {
 
 button {
   border-radius: 15px;
+  text-align: center;;
   border: 1px solid transparent;
   font-size: 1em;
   width: 20%;
@@ -100,6 +103,17 @@ button:hover {
   border-color: #646cff;
 }
 
+.reset {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  min-height: calc(100vh - 16.5rem);
+}
+
 /* HEADER */
 header {
   position: relative;
@@ -111,6 +125,7 @@ header {
 .title {
   text-align: left;
   font-family: 'orbitron';
+  height: 10rem;
 }
 
 /* NAV */
@@ -129,6 +144,7 @@ header {
 
 /* ABOUT ME SECTION */
 .about-me {
+  padding: 0;
   color: aliceblue;
   margin: auto 8%;
   text-align: left;
@@ -145,6 +161,7 @@ header {
 
 .bio {
   padding: 0 1rem;
+  margin: 0;
   flex: 4;
 }
 
@@ -195,6 +212,10 @@ li {
 }
 
 /* CONTACT */
+.formik {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 #custom-form {
   display: flex;
   flex-direction: column;
@@ -241,7 +262,7 @@ li {
 }
 
 footer {
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   bottom: 0;
   right: 0;
@@ -290,7 +311,6 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-
   .page-title {
     text-align: left;
     font-size: 2.4rem;
@@ -298,7 +318,10 @@ footer {
     padding-top: 4rem;
     padding-bottom: 2rem;
   }
-
+  
+  h2 {
+    padding-top: 3rem;
+  }
   /* NAV (MOBILE) */
   header {
     position: relative;
@@ -307,10 +330,14 @@ footer {
     color: var(--text-color);
   }
 
+  .navbar {
+    padding:0;
+  }
+
   #navLinks {
     position: absolute;
     right: 0;
-    bottom: -3rem;
+    /* bottom: -3rem; */
     background-color: grey;
     width: 100%;
     height: 3.75rem;

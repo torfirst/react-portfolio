@@ -24,7 +24,7 @@ export default function Contact() {
   });
 
   return (
-    <div className="container">
+    <div className="formik">
       <h2>contact</h2>
       <form id="custom-form" onSubmit={formik.handleSubmit}>
         <input

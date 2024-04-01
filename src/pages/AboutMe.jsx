@@ -3,7 +3,7 @@ import Photo from '../assets/headshot.png'
 
 export default function AboutMe() {
     return (
-        <div>
+        <div className="reset">
             {/* <Header headerText="About Me" headerStyle={{backgroundColor: "var(--bgcolor)", color:"white"}}/> */}
             <h2>about me</h2>
             <div className="about-me">
