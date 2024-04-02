@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 export default function Contact() {
+  const [submissionMessage, setSubmissionMessage] = useState(null);
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -15,17 +18,22 @@ export default function Contact() {
         .matches(/\w+@\w+\.\w{2,}/, 'Please enter a valid email address'),
       message: Yup.string().required('Message is required'),
     }),
-    onSubmit: (values) => {
-      // Use EmailJS to send the form data via email
-      emailjs.send('service_gnfkpcm', 'template_xck87kf', values)
-        .then((response) => {
-          alert('Your message has been sent successfully!');
-          console.log('SUCCESS!', response.status, response.text);
-          formik.resetForm();
-        }, (error) => {
-          alert('An error occurred while sending your message. Please try again later.');
-          console.error('FAILED...', error);
-        });
+    onSubmit: async (values, { setSubmitting }) => {
+      setSubmitting(true);
+
+      try {
+        await emailjs.sendForm('service_gnfkpcm', 'template_xck87kf', '#custom-form');
+        setSubmissionMessage({ type: 'success', text: 'Your message has been sent successfully!' });
+        formik.resetForm();
+      } catch (error) {
+        console.error('FAILED...', error);
+        setSubmissionMessage({ type: 'error', text: 'An error occurred while sending your message. Please try again later.' });
+      } finally {
+        setSubmitting(false);
+        setTimeout(() => {
+          setSubmissionMessage(null);
+        }, 5000); // Hide the message after 5 seconds
+      }
     },
   });
 
@@ -71,6 +79,12 @@ export default function Contact() {
         <button type="submit" disabled={formik.isSubmitting}>
           {formik.isSubmitting ? 'Sending...' : 'Submit'}
         </button>
+
+        {submissionMessage && (
+          <div className={`submission-message ${submissionMessage.type}`}>
+            {submissionMessage.text}
+          </div>
+        )}
       </form>
     </div>
   );
