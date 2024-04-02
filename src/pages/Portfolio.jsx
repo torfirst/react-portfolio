@@ -2,6 +2,8 @@ import Birbtopia from '../assets/birbtopia.png';
 import Cancelled from '../assets/yourecancelled.png';
 import Weather from '../assets/weatherdashboard.gif';
 import RecipeDrink from '../assets/recipedrink.png';
+import Scheduler from '../assets/scheduler.png';
+import Notetaker from '../assets/notetaker.png';
 
 export default function Portfolio() {
     const dataArray = [
@@ -28,21 +30,33 @@ export default function Portfolio() {
             image: Weather,
             link: "https://torfirst.github.io/weather-dashboard/",
             repo: "https://github.com/torfirst/weather-dashboard"
-        }
+        },
+        {
+            title: "Workday Scheduler",
+            image: Scheduler,
+            link: "https://torfirst.github.io/recipe-drink-api-proj/",
+            repo: "https://github.com/torfirst/recipe-drink-api-proj"
+        },
+        {
+            title: "Notetaker",
+            image: Notetaker,
+            link: "https://torfirst.github.io/recipe-drink-api-proj/",
+            repo: "https://github.com/torfirst/recipe-drink-api-proj"
+        },
     ]
     return (
-        <div className="reset">
+        <div className="reset portfolioMargins">
             <h2>portfolio</h2>
-            <p>Click on a title to go to the project repository, or click on an image tile to go to the deployed project.</p>
+            <p className="portfolioBlurb">Click on a title to go to the project repository, or click on an image tile to go to the deployed project.</p>
             <div className='portfolio'>
-                    {dataArray.map(data => (
-        <div key={data.title}>
-            <a className='portLinks' href={data.link}>
-                <h3 className='repo'>{data.title}</h3>
-                <img className="tiles" src={data.image} alt={data.title} />
-            </a>
-        </div>
-    ))}
+                {dataArray.map(data => (
+                    <div className="formatTiles" key={data.title}>
+                        <a className='portLinks' href={data.link}>
+                            <h3 className='repo'>{data.title}</h3>
+                            <img className="tiles" src={data.image} alt={data.title} />
+                        </a>
+                    </div>
+                ))}
             </div>
         </div>
     )

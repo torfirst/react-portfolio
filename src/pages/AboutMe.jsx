@@ -7,7 +7,7 @@ export default function AboutMe() {
             {/* <Header headerText="About Me" headerStyle={{backgroundColor: "var(--bgcolor)", color:"white"}}/> */}
             <h2>about me</h2>
             <div className="about-me">
-                <img id="headshot" src={Photo}></img>
+                <img id="headshot" className='mobile-hide' src={Photo}></img>
                 <p className="bio">Hello! This is where my bio will go.
                     <br /><br />
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies. Neque viverra justo nec ultrices dui sapien eget mi proin. Amet est placerat in egestas. Egestas quis ipsum suspendisse ultrices gravida. Neque egestas congue quisque egestas diam in arcu cursus euismod. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Cras sed felis eget velit aliquet. Varius sit amet mattis vulputate enim. Viverra nibh cras pulvinar mattis nunc sed blandit.
