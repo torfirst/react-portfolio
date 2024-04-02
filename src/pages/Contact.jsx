@@ -1,7 +1,5 @@
-// import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-// import { validateEmail } from '../../utils/helpers';
 
 export default function Contact() {
   const formik = useFormik({
@@ -13,13 +11,21 @@ export default function Contact() {
     validationSchema: Yup.object({
       name: Yup.string().required('Name is required'),
       email: Yup.string()
-      .required('Email is required')
-      .matches(/\w+@\w+\.\w{2,}/, 'Please enter a valid email address'),
+        .required('Email is required')
+        .matches(/\w+@\w+\.\w{2,}/, 'Please enter a valid email address'),
       message: Yup.string().required('Message is required'),
     }),
     onSubmit: (values) => {
-      alert(`Hi ${values.name}, your message has been received. Thank you for reaching out!`);
-      formik.resetForm();
+      // Use EmailJS to send the form data via email
+      emailjs.send('service_gnfkpcm', 'template_xck87kf', values)
+        .then((response) => {
+          alert('Your message has been sent successfully!');
+          console.log('SUCCESS!', response.status, response.text);
+          formik.resetForm();
+        }, (error) => {
+          alert('An error occurred while sending your message. Please try again later.');
+          console.error('FAILED...', error);
+        });
     },
   });
 
@@ -62,7 +68,9 @@ export default function Contact() {
           <p className="error-text">{formik.errors.message}</p>
         ) : null}
 
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={formik.isSubmitting}>
+          {formik.isSubmitting ? 'Sending...' : 'Submit'}
+        </button>
       </form>
     </div>
   );
