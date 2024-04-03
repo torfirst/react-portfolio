@@ -10,8 +10,8 @@ export default function Portfolio() {
         {
             title: "Birbtopia",
             image: Birbtopia,
-            link: "https://yourecancelled-4aa25f1b6285.herokuapp.com/login",
-            repo: 'https://github.com/torfirst/ur-cancelled'
+            link: "https://birbtopia-4joq.onrender.com/",
+            repo: 'https://github.com/Scrysis/birbtopia'
         },
         {
             title: "You're Cancelled",
@@ -34,14 +34,14 @@ export default function Portfolio() {
         {
             title: "Workday Scheduler",
             image: Scheduler,
-            link: "https://torfirst.github.io/recipe-drink-api-proj/",
-            repo: "https://github.com/torfirst/recipe-drink-api-proj"
+            link: "https://torfirst.github.io/work-day-scheduler/",
+            repo: "https://github.com/torfirst/work-day-scheduler"
         },
         {
             title: "Notetaker",
             image: Notetaker,
-            link: "https://torfirst.github.io/recipe-drink-api-proj/",
-            repo: "https://github.com/torfirst/recipe-drink-api-proj"
+            link: "https://notetakerproj0-24281f1b47e0.herokuapp.com/",
+            repo: "https://github.com/torfirst/note-taker"
         },
     ]
     return (
