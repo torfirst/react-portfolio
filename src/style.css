@@ -322,9 +322,9 @@ footer {
 }
 
 /* MOBILE */
-@media screen and (max-width: 1800px) {}
+/* @media screen and (max-width: 1800px) {} */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   .page-title {
     text-align: left;
     font-size: 2.4rem;
