@@ -45,7 +45,7 @@ export default function Portfolio() {
         },
     ]
     return (
-        <div className="reset portfolioMargins">
+        <div className="reset">
             <h2>portfolio</h2>
             <p className="portfolioBlurb">Click on a title to go to the project repository, or click on an image tile to go to the deployed project.</p>
             <div className='portfolio'>

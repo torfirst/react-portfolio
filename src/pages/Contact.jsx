@@ -39,7 +39,7 @@ export default function Contact() {
   });
 
   return (
-    <div className="formik">
+    <div className="reset formik">
       <h2>contact</h2>
       <form id="custom-form" onSubmit={formik.handleSubmit}>
         <input

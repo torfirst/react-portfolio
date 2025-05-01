@@ -8,7 +8,7 @@ export default function Resume() {
                 <h2>resume</h2>
                 {/* <PDFViewer /> */}
                 <a href={PDF} download>Download my resume here</a> <br /> <br />
-                <object data={PDF} type="application/pdf" style={{ width: '100%', height: '100vh', display: 'block' }}></object>
+                <object className='resumeObj' data={PDF} type="application/pdf" style={{ width: '100vw', height: '100vh', display: 'block' }}></object>
             </div>
         </>
     )

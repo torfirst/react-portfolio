@@ -66,7 +66,7 @@ h1 {
 h2 {
   /* color: var(--heading); */
   font-size: 2.0rem;
-  padding: 1% 5%;
+  padding: 2rem 5%;
   font-family: 'major-mono-display';
 }
 
@@ -113,7 +113,7 @@ button:hover {
 main {
   padding: 0;
   margin: 0;
-  min-height: calc(100vh - 16.5rem);
+  min-height: calc(100vh - 20rem);
 }
 
 /* HEADER */
@@ -185,10 +185,6 @@ li {
 }
 
 /* PORTFOLIO */
-.portfolioMargins {
-  margin: 0 8rem;
-}
-
 .portfolio {
   display: flex;
   padding: 1rem;
@@ -227,8 +223,7 @@ li {
 
 /* CONTACT */
 .formik {
-  padding-bottom: 0;
-  margin-bottom: 0;
+  width: 100vw;
 }
 
 #custom-form {
@@ -270,6 +265,10 @@ li {
   margin-bottom: .5rem;
 }
 
+.resumeObj{
+  margin-bottom: 3rem;
+}
+
 /* FOOTER */
 .iconStyle {
   width: 4rem;
@@ -278,7 +277,7 @@ li {
 }
 
 footer {
-  /* position: absolute; */
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
